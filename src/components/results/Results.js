@@ -15,7 +15,7 @@ class Results extends Component {
     }
 
     if (this.props.stars) {
-      hotels = hotels.filter(item => parseInt(item.rate) <= this.props.stars);
+      hotels = hotels.filter(item => parseInt(item.rate) >= this.props.stars);
     }
 
     if (this.props.hasPool && (this.props.hasPool === 'true')) {

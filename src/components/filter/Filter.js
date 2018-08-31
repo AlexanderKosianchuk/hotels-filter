@@ -13,9 +13,9 @@ const STARS = [1, 2, 3, 4, 5];
 class Filter extends Component {
   constructor(props) {
     super(props);
-console.log(props.searchQuery );
+
     this.state = {
-      stars: props.stars || STARS[STARS.length - 1],
+      stars: props.stars || 0,
       hasPool: props.hasPool === 'true',
       searchQuery: props.searchQuery || '',
     }
