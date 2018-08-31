@@ -12,14 +12,14 @@ class Hotels extends Component {
         <Row className="show-grid">
           <Col md={3}>
             <Filter
-              search={ this.props.search }
+              searchQuery={ this.props.searchQuery }
               stars={ this.props.stars }
               hasPool={ this.props.hasPool }
             />
           </Col>
           <Col md={9}>
           <Results
-            search={ this.props.search }
+            searchQuery={ this.props.searchQuery }
             stars={ this.props.stars }
             hasPool={ this.props.hasPool }
           />
@@ -32,8 +32,8 @@ class Hotels extends Component {
 
 function mapStateToProps(state, ownProps) {
   return {
-    search: ownProps.match.params.searchQuery || null,
-    stars: ownProps.match.params.stars || null,
+    searchQuery: ownProps.match.params.searchQuery || null,
+    stars: parseInt(ownProps.match.params.stars) || null,
     hasPool: ownProps.match.params.hasPool || null,
   };
 }

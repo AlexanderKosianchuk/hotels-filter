@@ -10,12 +10,12 @@ class Router extends Component {
     super (props);
 
     this.routes = [
-      { isExact: true, path: '/hotels/search/:searchQuery/stars/:stars/has-pool/:hasPool', component: Hotels },
-      { isExact: true, path: '/hotels/search/:searchQuery/stars/:stars/', component: Hotels },
-      { isExact: true, path: '/hotels/search/:searchQuery', component: Hotels },
-      { isExact: true, path: '/hotels/has-pool/:hasPool', component: Hotels },
-      { isExact: true, path: '/hotels/stars/:stars', component: Hotels },
-      { isExact: true, path: '/hotels/', component: Hotels },
+      { isExact: true, path: '/search/:searchQuery/stars/:stars/has-pool/:hasPool', component: Hotels },
+      { isExact: true, path: '/search/:searchQuery/stars/:stars/', component: Hotels },
+      { isExact: true, path: '/search/:searchQuery', component: Hotels },
+      { isExact: true, path: '/stars/:stars/has-pool/:hasPool', component: Hotels },
+      { isExact: true, path: '/has-pool/:hasPool', component: Hotels },
+      { isExact: true, path: '/stars/:stars', component: Hotels },
       { isExact: true, path: '/', component: Hotels },
     ];
   }
